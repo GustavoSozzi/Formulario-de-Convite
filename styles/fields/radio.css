@@ -1,0 +1,112 @@
+label+.radio-wrapper {
+    /*qualquer elemento com a classe .radio-wrapper que vem imediatamente depois de um elemento <label> no HTML*/
+    margin-top: 1rem;
+}
+
+.radio-inner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .45rem;
+}
+
+.radio-inner input[type="radio"] {
+    display: none;
+}
+
+
+.radio-inner label {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 0 4px #2b2b2b;
+    margin-left: auto;
+}
+
+.radio-inner input[type="radio"]:checked+label {
+    box-shadow: 0 0 0 4px var(--shape-button, #59B2FF),
+        0 0 0 8px rgba(89, 178, 255, 0.5);
+}
+
+
+.theme-option .label-inner {
+    display: grid;
+    background-color: var(--shape-button);
+    justify-items: center;
+    border-radius: .5rem;
+    text-align: center;
+    cursor: pointer;
+
+    position: relative;
+
+    gap: 0.5rem;
+    padding: 0.5rem;
+
+    & input,
+    & input:focus,
+    & input:hover {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    &:hover,
+    &:focus-within {
+        border: 1px solid var(--brand-light);
+
+        &:has(:checked) {
+            background-image: url(/assets/img/selected.png);
+        }
+    }
+
+}
+
+
+
+.color-brand {
+    background-color: #59B2FF;
+}
+
+.color-purple {
+    background-color: #B259FF;
+}
+
+.color-navy {
+    background-color: #6A59FF;
+}
+
+.color-fuschia {
+    background-color: #FF59F9;
+}
+
+.color-pink {
+    background-color: #FF598B;
+}
+
+.color-orange {
+    background-color: #FF8B59;
+}
+
+.color-yellow {
+    background-color: #FFCD59;
+}
+
+.color-lime {
+    background-color: #E1FF59;
+}
+
+.color-green {
+    background-color: #59FF91;
+}
+
+.color-cyan {
+    background-color: #59FFF9;
+}
+
+.color-danger {
+    background-color: #FF5959;
+}
